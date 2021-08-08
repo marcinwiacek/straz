@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.mwiacek.straz.ScrollerWebView
+        android:id="@+id/webView5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fadingEdge="vertical|horizontal"
+        android:fadingEdgeLength="1mm"
+        android:scrollbars="none" />
+
+    <com.mwiacek.straz.ScrollerView
+        android:id="@+id/view5"
+        android:layout_width="68px"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/webView5"
+        android:layout_alignTop="@+id/webView5" />
+
+</RelativeLayout>

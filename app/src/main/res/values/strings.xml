@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">STRAŻ</string>
+    <string-array name="ogolnelista">
+        <item>Wielkości zdarzeń</item>
+        <item>Kategorie ZL i wysokości budynków</item>
+        <item>Wielkość podmiotów JOP</item>
+        <item>Poziomy kierowania</item>
+        <item>Kierowanie interwencyjne</item>
+        <item>Kierowanie taktyczne</item>
+        <item>Kierowanie strategiczne</item>
+        <item>Rodzaje działań</item>
+        <item>Teren pożaru, akcji</item>
+        <item>Skala Beauforta</item>
+        <item>Uprawnienia</item>
+        <item>Akty prawne</item>
+    </string-array>
+    <string-array name="chemialista">
+        <item>Substancje i przeliczniki</item>
+        <item>Towary niebezpieczne – kody UN</item>
+        <item>Towary niebezpieczne – nr zagrożenia</item>
+        <item>Towary niebezpieczne – oznaczenia</item>
+        <item>Diament niebezpieczeństwa</item>
+        <item>Hazem-Code</item>
+        <item>Oznaczenie butli</item>
+        <item>Sorbenty</item>
+        <item>Strefy zagrożenia wybuchem</item>
+        <item>Klimatyzacja</item>
+    </string-array>
+    <string-array name="prawolista">
+        <item>Ustawa o PSP</item>
+        <item>Ustawa o ochronie przeciwpożarowej</item>
+        <item>Rozporządzenie o KSRG</item>
+    </string-array>
+    <string-array name="innelista">
+        <item>LPR</item>
+        <item>Łączność</item>
+        <item>Dym - cechy</item>
+        <item>Grupy pożarów</item>
+        <item>Różne</item>
+        <item>Stopnie i korpusy w PSP</item>
+        <item>Stopnie w OSP</item>
+        <item>Numery alarmowe</item>
+        <item>Linki</item>
+        <item>Tryskacze</item>
+        <item>Ratownictwo medyczne</item>
+    </string-array>
+    <string name="hint3">Szukanie - treść</string>
+</resources>

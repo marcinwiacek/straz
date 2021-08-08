@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Informacje">
+
+        <Preference
+            android:key="Czyszczenie"
+            android:summary="Kliknij aby otworzyć stronę WWW z adresami PayPal/Bitcoin i kontaktem."
+            android:title="Wesprzyj autora" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Ustawienia">
+        <ListPreference
+            android:defaultValue=""
+            android:key="wyglad"
+            android:summary=""
+            android:title="Wygląd" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="true"
+            android:key="No_Lock"
+            android:summary="Wyłączenie automatycznej blokady"
+            android:title="Brak blokowania ekranu" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="Obrot"
+            android:summary="Możliwość zmiany orientacji ekranu"
+            android:title="Obrót" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="Wielkosc"
+            android:summary="Możliwość zmiany wielkości treści"
+            android:title="Zmiana wielkości treści" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="Kontrolki"
+            android:summary="Pokazanie lub ukrycie kontrolek do zmiany wielkości (Android 4.4 i wyższe)"
+            android:title="Kontrolki zmiany wielkości treści" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="Wielkosc2"
+            android:summary="Zapis wielkości treści przy wyjściu (zależy od urządzenia)"
+            android:title="Zapis wielkości treści" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:enabled="true"
+            android:key="Zawijanie"
+            android:summary="Inny sposób pokazania treści (zależy od urządzenia)"
+            android:title="Inne pokazanie treści" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
