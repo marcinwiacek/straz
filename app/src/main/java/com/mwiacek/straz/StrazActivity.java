@@ -239,7 +239,7 @@ public class StrazActivity extends TabActivity {
 
         webView.setHorizontalScrollBarEnabled(false);
         webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
-        webView.getSettings().setAppCacheEnabled(false);
+        //webView.getSettings().setAppCacheEnabled(false);
 
         webView.loadUrl("file:///android_asset/about.htm");
 

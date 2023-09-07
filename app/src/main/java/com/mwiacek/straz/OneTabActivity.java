@@ -177,7 +177,7 @@ public abstract class OneTabActivity extends Activity {
         webView.sv = scroller;
 
         webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
-        webView.getSettings().setAppCacheEnabled(false);
+        //webView.getSettings().setAppCacheEnabled(false);
         webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
         webView.getSettings().setSupportZoom(true);
         webView.getSettings().setBuiltInZoomControls(((StrazActivity) getParent())
@@ -352,7 +352,7 @@ public abstract class OneTabActivity extends Activity {
 
             View view = super.getView(position, convertView, parent);
 
-            TextView text = (TextView) view.findViewById(android.R.id.text1);
+            TextView text = view.findViewById(android.R.id.text1);
             text.setTypeface(null, Typeface.NORMAL);
             text.setSingleLine(false);
 

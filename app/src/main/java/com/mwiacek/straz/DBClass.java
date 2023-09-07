@@ -7,16 +7,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 class DBClass {
-    private final Context mCtx;
-    private DBClassHelper mDbHelper;
-    private SQLiteDatabase mDb;
-
     static final String DB_TAB_HOST = "3"; //nr zakladki
     static final String DB_SIZE = "19";//wielkosc w kazdej zakladce
     static final String DB_NR_WERSJI = "21";//nr wersji aplikacji
     static final String DB_ZAKLADKA1 = "22";//nr pozycji w zakladce
     static final String DB_ZAKLADKA2 = "23";//---"---
     static final String DB_ZAKLADKA3 = "24";//---"---
+    private final Context mCtx;
+    private DBClassHelper mDbHelper;
+    private SQLiteDatabase mDb;
 
     //ostatni 24
 

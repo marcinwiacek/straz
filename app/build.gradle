@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
-
     defaultConfig {
         applicationId "com.mwiacek.straz"
         minSdkVersion 8
-        targetSdkVersion 26
+        targetSdkVersion 33
+        compileSdkVersion = 34
+        buildToolsVersion = '33.0.1'
     }
 
     buildTypes {
@@ -17,7 +16,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = '1.8'
-        targetCompatibility = '1.8'
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.mwiacek.straz'
 }
