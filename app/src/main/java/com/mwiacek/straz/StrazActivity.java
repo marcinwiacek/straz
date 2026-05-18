@@ -44,7 +44,8 @@ public class StrazActivity extends TabActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         sp = PreferenceManager.getDefaultSharedPreferences(this);
-        if (sp.getString("wyglad", "").length() == 0) {
+        setTheme(android.R.style.Theme_DeviceDefault);
+       /* if (sp.getString("wyglad", "").length() == 0) {
             setTheme(android.R.style.Theme);
             SharedPreferences.Editor editor1 = sp.edit();
             editor1.putString("wyglad", "pusty");
@@ -59,9 +60,9 @@ public class StrazActivity extends TabActivity {
             setTheme(android.R.style.Theme_Holo_Light);
         } else if (sp.getString("wyglad", "").equals("domyslnyurzadzenie")) {
             setTheme(android.R.style.Theme_DeviceDefault);
-        } else if (sp.getString("wyglad", "").equals("domyslnyurzadzenie2")) {
-            setTheme(android.R.style.Theme_DeviceDefault_Light);
-        }
+        } else if (sp.getString("wyglad", "").equals("domyslnyurzadzenie2")) {*/
+            //setTheme(android.R.style.Theme_DeviceDefault_Light);
+        /*}*/
 
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
