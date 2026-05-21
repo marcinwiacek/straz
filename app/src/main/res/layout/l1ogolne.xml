@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView1"
@@ -30,8 +30,8 @@
         android:id="@+id/button1rt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_below="@+id/spinner1"
+        android:layout_alignParentRight="true"
         android:enabled="false"
         android:text="&gt;&gt;" />
 
@@ -49,14 +49,14 @@
         android:id="@+id/webView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/button1rt"
+        android:layout_alignParentLeft="true"
         android:scrollbars="none" />
 
     <com.mwiacek.straz.ScrollerView
         android:id="@+id/view1"
         android:layout_width="68px"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/button1rt"
+        android:layout_alignRight="@+id/webView1"
         android:layout_alignTop="@+id/webView1" />
 </RelativeLayout>

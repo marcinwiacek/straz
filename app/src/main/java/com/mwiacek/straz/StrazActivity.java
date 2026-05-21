@@ -23,6 +23,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
+import android.widget.PopupMenu;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -44,8 +45,7 @@ public class StrazActivity extends TabActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         sp = PreferenceManager.getDefaultSharedPreferences(this);
-        setTheme(android.R.style.Theme_DeviceDefault);
-       /* if (sp.getString("wyglad", "").length() == 0) {
+        if (sp.getString("wyglad", "").length() == 0) {
             setTheme(android.R.style.Theme);
             SharedPreferences.Editor editor1 = sp.edit();
             editor1.putString("wyglad", "pusty");
@@ -60,9 +60,9 @@ public class StrazActivity extends TabActivity {
             setTheme(android.R.style.Theme_Holo_Light);
         } else if (sp.getString("wyglad", "").equals("domyslnyurzadzenie")) {
             setTheme(android.R.style.Theme_DeviceDefault);
-        } else if (sp.getString("wyglad", "").equals("domyslnyurzadzenie2")) {*/
-            //setTheme(android.R.style.Theme_DeviceDefault_Light);
-        /*}*/
+        } else if (sp.getString("wyglad", "").equals("domyslnyurzadzenie2")) {
+            setTheme(android.R.style.Theme_DeviceDefault_Light);
+        }
 
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
@@ -116,12 +116,25 @@ public class StrazActivity extends TabActivity {
 
         for (int i = 0; i < 3; i++) {
             tabHost.getTabWidget().getChildAt(i).getLayoutParams().height = h;
-            tabHost.getTabWidget().getChildAt(i).getLayoutParams().width = ViewGroup.LayoutParams.WRAP_CONTENT;
+            tabHost.getTabWidget().getChildAt(i).getLayoutParams().width =
+                    ViewGroup.LayoutParams.WRAP_CONTENT;
+        }
+
+        if (android.os.Build.VERSION.SDK_INT > 10) {
+            tabHost.getTabWidget().setOnLongClickListener(view -> {
+                PopupMenu popup = new PopupMenu(this, view);
+                MenuInflater inflater = popup.getMenuInflater();
+                inflater.inflate(R.menu.menu, popup.getMenu());
+                onPrepareOptionsMenu(popup.getMenu());
+                popup.show();
+                popup.setOnMenuItemClickListener(this::onOptionsItemSelected);
+                return false;
+            });
         }
 
         tabHost.setCurrentTab(Integer.parseInt(db.GetSetting(DBClass.DB_TAB_HOST, "2")));
 
-        try {
+      /*  try {
             if (!db.GetSetting(DBClass.DB_NR_WERSJI, "0").equals(
                     getPackageManager().getPackageInfo(getPackageName(), 0).versionName)) {
                 ad = new AlertDialog.Builder(this).create();
@@ -159,7 +172,7 @@ public class StrazActivity extends TabActivity {
                 db.SetSetting(DBClass.DB_NR_WERSJI, getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
             }
         } catch (NameNotFoundException ignore) {
-        }
+        }*/
     }
 
     @Override

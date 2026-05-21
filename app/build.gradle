@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     defaultConfig {
         applicationId = "com.mwiacek.straz"
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 36
         compileSdkVersion = 36
         buildToolsVersion = '35.0.0'

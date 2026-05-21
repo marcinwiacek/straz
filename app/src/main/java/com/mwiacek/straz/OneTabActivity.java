@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.SystemClock;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MenuInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.PopupMenu;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -234,6 +236,19 @@ public abstract class OneTabActivity extends Activity {
         spinner.setSelection(Integer.parseInt(
                 ((StrazActivity) getParent()).db.GetSetting(
                         Db_Number_Of_Selection, "0")), false);
+        if (android.os.Build.VERSION.SDK_INT > 10) {
+            spinner.setOnLongClickListener(v -> {
+                PopupMenu popup = new PopupMenu(this, v);
+                MenuInflater inflater = popup.getMenuInflater();
+                inflater.inflate(R.menu.menu, popup.getMenu());
+                getParent().onPrepareOptionsMenu(popup.getMenu());
+                popup.show();
+                popup.setOnMenuItemClickListener(item ->
+                        getParent().onOptionsItemSelected(item)
+                );
+                return false;
+            });
+        }
 
         adapter = new ArrayAdapter<>(this, R.layout.tip_item, Tips);
         textView.setAdapter(adapter);

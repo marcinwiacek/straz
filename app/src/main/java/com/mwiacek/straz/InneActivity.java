@@ -2,7 +2,7 @@ package com.mwiacek.straz;
 
 import android.os.Bundle;
 
-public class InneActivity extends OneTabActivity {
+public class    InneActivity extends OneTabActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
